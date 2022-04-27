@@ -1,0 +1,11 @@
+Để có thể debug nhanh thì có thể viết chồng command chạy của docker trong yaml của k8s
+
+      containers:
+        - name: aspnet-core
+          image: docker-registry-path.com:Port/docker-name:latest
+          imagePullPolicy: "Always"
+          workingDir: /app
+          command: ["/bin/sh", "-ec", "while :; do echo '.'; sleep 5 ; done"]
+		  
+Sau khi giữ vòng lặp command chạy để dựng pod lên
+có thể log vào console của pod đó để thực thi các lệnh cần cho debug
