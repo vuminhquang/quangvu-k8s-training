@@ -9,3 +9,8 @@
 		  
 Sau khi giữ vòng lặp command chạy để dựng pod lên
 có thể log vào console của pod đó để thực thi các lệnh cần cho debug
+
+
+
+kubectl port-forward <pod-name> 60000:8080
+kubectl port-forward vdgerpsmart-aspnet-core-6bb44867b9-9pgdq 60000:8080 --namespace vdg --address 0.0.0.0
